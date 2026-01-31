@@ -1,10 +1,18 @@
-import React from 'react'
+import { Route, Routes } from "react-router-dom"
+import Layout from "./pages/Layout"
+import Dashboard from "./pages/Dashboard"
+import FoodLog from "./pages/FoodLog"
+
 
 const App = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <Routes>
+        <Route path ='/' element ={<Layout />}></Route>
+        <Route index element ={<Dashboard />}></Route>
+        <Route path ="food" element ={<FoodLog/>}></Route>
+      </Routes>
+    </>
   )
 }
 
